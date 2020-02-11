@@ -1,0 +1,15 @@
+The point of active record is that it maps database rows into individual objects, then the object is responsible for
+knowing how to create, read, update and delete the underline database entry. The vast majority of time the database
+fields translate into object properties and vise versa without any manipulation. This is usually powered by an ORM
+(Object Relational Mapper)
+
+Advantages:
+This is primarily useful to prevent any duplication in our code. By having a simple mapping between database columns
+and object properties, we can treat every object the same. More importantly we can have a simple set of business logic that
+can handle all the database interactions.
+
+Drawbacks:
+1. Objects are tightly coupled to the database. The individual object properties mapped one to one with the database schema.
+   So if the database or the object needs to change, the other one has to also.
+2. Since this pattern is so closely tided to the database, it's hard to test the code without using actual database.
+   In Unit Testing database access slows down the process, sometimes makes it impossible.

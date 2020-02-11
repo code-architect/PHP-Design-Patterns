@@ -1,0 +1,10 @@
+{
+    "require": {
+        "illuminate/events": "^6.14",
+        "illuminate/database": "^6.14"
+    },
+    "autoload": {
+        "files": ["active_record_pattern/Config/database.php"],
+        "classmap": ["active_record_pattern/Models"]
+    }
+}
