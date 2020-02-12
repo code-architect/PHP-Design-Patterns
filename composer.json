@@ -1,10 +1,14 @@
 {
     "require": {
         "illuminate/events": "^6.14",
-        "illuminate/database": "^6.14"
+        "illuminate/database": "^6.14",
+        "fzaninotto/faker": "^1.9"
     },
     "autoload": {
         "files": ["active_record_pattern/Config/database.php"],
         "classmap": ["active_record_pattern/Models"]
+    },
+    "require-dev": {
+        "mp091689/dump-die": "^1.0"
     }
 }
