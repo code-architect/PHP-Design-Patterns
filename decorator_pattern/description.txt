@@ -1,0 +1,5 @@
+Because PHP supports single inheritance, decorator patterns allow us to add new behaviour at the runtime to specific instances of
+an object instead the entire class itself.
+
+Drawbacks:
+1. It's add behaviour at the runtime and not specific to the class itself, so testing can be hard.
