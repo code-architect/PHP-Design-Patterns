@@ -1,0 +1,6 @@
+The Adapter Pattern works as a translation layer between components to make one interface look like another.
+This also useful for pluggable components, imagine a scenario where we need to support multiple email providers or
+different but similar API's adapter pattern does all the work for us
+
+Drawbacks:
+1. Hiding bad design
