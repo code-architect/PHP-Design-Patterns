@@ -8,21 +8,6 @@ interface Transport
 }
 //----------------------------------------------------------------------------------------------------------------//
 
-// Creator Class with the factory method
-abstract class Courier
-{
-    abstract function getCourierTransport(): Transport;
-
-    public function sendCourier()
-    {
-        $transport = $this->getCourierTransport();
-        $transport->ready();
-        $transport->dispatch();
-        $transport->deliver();
-    }
-}
-//----------------------------------------------------------------------------------------------------------------//
-
 // Concrete Product providing implementations of product Interface
 class PlaneTransport implements Transport
 {
@@ -61,6 +46,21 @@ class TruckTransport implements Transport
     public function deliver(): void
     {
         echo "deliver from truck <br>";
+    }
+}
+//----------------------------------------------------------------------------------------------------------------//
+
+// Creator Class with the factory method
+abstract class Courier
+{
+    abstract function getCourierTransport(): Transport;
+
+    public function sendCourier()
+    {
+        $transport = $this->getCourierTransport();
+        $transport->ready();
+        $transport->dispatch();
+        $transport->deliver();
     }
 }
 //----------------------------------------------------------------------------------------------------------------//
