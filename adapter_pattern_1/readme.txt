@@ -1,0 +1,1 @@
+Adapter class serves as a bridge between existing code and app code.
